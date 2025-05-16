@@ -1,0 +1,9 @@
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/TODODB
+    username: hee99
+    password: hee99
+  jpa:
+    show-sql: true
+    database: postgresql
