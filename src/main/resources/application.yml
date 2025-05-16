@@ -1,9 +1,14 @@
 spring:
   datasource:
     driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://localhost:5432/TODODB
+    url: jdbc:postgresql://localhost:5432/tododb
     username: hee99
     password: hee99
   jpa:
-    show-sql: true
+    hibernate:
+      ddl-auto: update
     database: postgresql
+    properties:
+      hibernate:
+        show-sql: true
+        format_sql: true
