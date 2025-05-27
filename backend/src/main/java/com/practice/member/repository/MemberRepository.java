@@ -1,6 +1,6 @@
-package com.practice.todo.repository;
+package com.practice.member.repository;
 
-import com.practice.todo.entity.Member;
+import com.practice.member.entity.Member;
 import org.springframework.data.repository.CrudRepository;
 
 public interface MemberRepository extends CrudRepository<Member, String> {

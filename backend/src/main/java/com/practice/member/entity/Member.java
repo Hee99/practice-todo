@@ -1,4 +1,4 @@
-package com.practice.todo.entity;
+package com.practice.member.entity;
 
 import jakarta.persistence.*;
 import lombok.*;

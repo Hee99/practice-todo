@@ -1,9 +1,9 @@
-package com.practice.todo.service.impl;
+package com.practice.member.service.impl;
 
-import com.practice.todo.dto.MemberDto;
-import com.practice.todo.entity.Member;
-import com.practice.todo.repository.MemberRepository;
-import com.practice.todo.service.MemberService;
+import com.practice.member.dto.MemberDto;
+import com.practice.member.entity.Member;
+import com.practice.member.repository.MemberRepository;
+import com.practice.member.service.MemberService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

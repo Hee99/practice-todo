@@ -1,6 +1,6 @@
-package com.practice.todo.service;
+package com.practice.member.service;
 
-import com.practice.todo.dto.MemberDto;
+import com.practice.member.dto.MemberDto;
 
 public interface MemberService {
 

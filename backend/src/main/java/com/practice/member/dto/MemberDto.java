@@ -1,8 +1,6 @@
-package com.practice.todo.dto;
+package com.practice.member.dto;
 
-import jakarta.persistence.Id;
 import lombok.Data;
-import org.hibernate.annotations.Comment;
 
 @Data
 public class MemberDto {
