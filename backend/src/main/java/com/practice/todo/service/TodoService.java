@@ -1,17 +1,14 @@
 package com.practice.todo.service;
 
-import com.practice.todo.dto.TodoCreateDto;
-import com.practice.todo.dto.TodoDetailDto;
-import com.practice.todo.dto.TodoListDto;
-import com.practice.todo.entity.Todo;
+import com.practice.todo.dto.*;
 
 import java.util.List;
 
 public interface TodoService {
 
-    List<TodoListDto.Response> getAllTodos();
+    List<TodoListResponseDto> getAllTodos();
 
-    TodoCreateDto.Response createTodo(TodoCreateDto.Request todoCreateDto);
+    TodoCreateResponseDto createTodo(TodoCreateRequestDto todoCreateDto);
 
     TodoDetailDto getTodoById(Long id);
 

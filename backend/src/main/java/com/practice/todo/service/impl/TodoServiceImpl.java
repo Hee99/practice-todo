@@ -1,8 +1,6 @@
 package com.practice.todo.service.impl;
 
-import com.practice.todo.dto.TodoCreateDto;
-import com.practice.todo.dto.TodoDetailDto;
-import com.practice.todo.dto.TodoListDto;
+import com.practice.todo.dto.*;
 import com.practice.todo.entity.Todo;
 import com.practice.todo.repository.TodoRepository;
 import com.practice.todo.service.TodoService;
@@ -10,7 +8,6 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.stream.Collectors;
 
 @Service
 @RequiredArgsConstructor
@@ -19,18 +16,18 @@ public class TodoServiceImpl implements TodoService {
     private final TodoRepository todoRepository;
 
     @Override
-    public List<TodoListDto.Response> getAllTodos() {
+    public List<TodoListResponseDto> getAllTodos() {
         return todoRepository.findAll()
-                .stream().map(TodoListDto.Response::fromEntity)
-                .collect(Collectors.toList());
+                .stream().map(TodoListResponseDto::fromEntity)
+                .toList();
     }
 
     @Override
-    public TodoCreateDto.Response createTodo(TodoCreateDto.Request todoCreateDto) {
+    public TodoCreateResponseDto createTodo(TodoCreateRequestDto todoCreateDto) {
         Todo todo = Todo.createTodo(todoCreateDto.getContent(), todoCreateDto.getUserId());
         Todo saved = todoRepository.save(todo);
 
-        return TodoCreateDto.Response.fromEntity(saved);
+        return TodoCreateResponseDto.fromEntity(saved);
     }
 
     @Override

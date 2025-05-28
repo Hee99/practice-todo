@@ -1,8 +1,6 @@
 package com.practice.todo.controller;
 
-import com.practice.todo.dto.TodoCompleteUpdateDto;
-import com.practice.todo.dto.TodoContentUpdateDto;
-import com.practice.todo.dto.TodoCreateDto;
+import com.practice.todo.dto.*;
 import com.practice.todo.service.TodoService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
@@ -21,7 +19,7 @@ public class TodoController {
     }
 
     @PostMapping
-    public ResponseEntity<?> createTodo(@RequestBody TodoCreateDto.Request todoCreateDto) {
+    public ResponseEntity<?> createTodo(@RequestBody TodoCreateRequestDto todoCreateDto) {
         return ResponseEntity.ok(todoService.createTodo(todoCreateDto));
     }
 
