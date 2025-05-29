@@ -1,19 +1,24 @@
-package com.practice.member.entity;
+package com.practice.user.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
 import org.hibernate.annotations.Comment;
 
 @Entity
+@Table(name = "`user`")
 @Builder
 @Getter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @AllArgsConstructor
-public class Member {
+public class User {
 
     @Id
-    @Comment("사용자아이디")
-    private String memberId;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "user_id")
+    private Long id;
+
+    @Comment("이메일")
+    private String email;
 
     @Comment("비밀번호")
     private String password;
@@ -26,8 +31,5 @@ public class Member {
 
     @Comment("전화번호")
     private String phone;
-
-    @Comment("이메일")
-    private String email;
 
 }

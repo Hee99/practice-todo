@@ -1,11 +1,11 @@
-package com.practice.member.dto;
+package com.practice.user.dto;
 
 import lombok.Data;
 
 @Data
-public class MemberDto {
+public class UserDto {
 
-    private String memberId;
+    private String email;
 
     private String password;
 
@@ -14,7 +14,5 @@ public class MemberDto {
     private String gender;
 
     private String phone;
-
-    private String email;
 
 }
