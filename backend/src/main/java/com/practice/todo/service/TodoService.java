@@ -17,4 +17,5 @@ public interface TodoService {
     void updateComplete(Long id, String completeYn);
 
     void deleteTodo(Long id);
+
 }

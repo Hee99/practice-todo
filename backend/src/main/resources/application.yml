@@ -12,3 +12,7 @@ spring:
       hibernate:
         show_sql: true
         format_sql: true
+jwt:
+  secret: 585b03f2b5d653fc375f9aefaaa306740408f691d6e92dc31eed64a3033b46f0
+  accessTokenExpiration: 1800000 # 30 minutes (ms)
+  refreshTokenExpiration: 1800000 # 30 minutes (ms)
